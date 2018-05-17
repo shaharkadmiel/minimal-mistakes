@@ -16,12 +16,12 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Geoscience and random stuff"
+title                    : "Geosciences and random stuff"
 title_separator          : "-"
 name                     : "Shahar Shani-Kadmiel"
-description              : "(yet another) Geoscience blog"
-url                      : "http://shaharkadmiel.github.io"
-baseurl                  : "/blog"
+description              : "(yet another) Geosciences blog"
+url                      : "https://shaharkadmiel.github.io"
+baseurl                  : # "/blog"
 repository               : "shaharkadmiel/shaharkadmiel.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
@@ -29,7 +29,7 @@ words_per_minute         : 200
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
-    shortname            : shaharkadmiel
+    shortname            : "shaharkadmiel"
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -42,7 +42,7 @@ staticman:
   branch                 : # "master"
   commitMessage          : # "New comment."
   filename               : # comment-{@timestamp}
-  format                 : # "yml"
+  format                 : # "yaml"
   moderation             : # true
   path                   : # "/_data/comments/{options.slug}" (default)
   requiredFields         : # ['name', 'email', 'message']
@@ -58,7 +58,7 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-search                   : # true, false (default)
+search                   : true # true, false (default)
 search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, google
 algolia:
@@ -92,9 +92,9 @@ social:
 
 # Analytics
 analytics:
-  provider               : "google" # false (default), "google", "google-universal", "custom"
+  provider               : "google-gtag" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          : UA-119334578-1
+    tracking_id          : "UA-119334578-1"
     anonymize_ip         : # true, false (default)
 
 
@@ -199,7 +199,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Europe/Amsterdam # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
@@ -266,6 +266,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
