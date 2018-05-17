@@ -10,8 +10,8 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-theme                  : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"
+# theme                  : "minimal-mistakes-jekyll"
+remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
@@ -103,7 +103,7 @@ author:
   name             : "Shahar Shani-Kadmiel"
   avatar           : https://avatars1.githubusercontent.com/u/6872529
   bio              : "A seismo-acoustics postdoc researcher at Delft University of Technology"
-  location         : "Delft University of Technology<br>The Netherlands"
+  location         : "TU Delft<br>The Netherlands"
   email            : "s.shanikadmiel@tudelft.nl"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
