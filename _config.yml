@@ -16,20 +16,20 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "Geoscience and random stuff"
 title_separator          : "-"
-name                     : "Your Name"
-description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+name                     : "Shahar Shani-Kadmiel"
+description              : "(yet another) Geoscience blog"
+url                      : "http://shaharkadmiel.github.io"
+baseurl                  : "/blog"
+repository               : "shaharkadmiel/shaharkadmiel.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : shaharkadmiel
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -77,9 +77,9 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : shaharkadmiel
 facebook:
-  username               :
+  username               : shahar.kadmiel
   app_id                 :
   publisher              :
 og_image                 : # Open Graph/Twitter default site image
@@ -92,29 +92,29 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : "google" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : UA-119334578-1
     anonymize_ip         : # true, false (default)
 
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
-  email            :
+  name             : "Shahar Shani-Kadmiel"
+  avatar           : https://avatars1.githubusercontent.com/u/6872529
+  bio              : "A seismo-acoustics postdoc researcher at Delft University of Technology"
+  location         : "Delft University of Technology, The Netherlands"
+  email            : "s.shanikadmiel@tudelft.nl"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :
+  facebook         : shahar.kadmiel
   foursquare       :
-  github           :
-  gitlab           :
+  github           : shaharkadmiel
+  gitlab           : shaharkadmiel
   google_plus      :
   keybase          :
   instagram        :
@@ -122,14 +122,14 @@ author:
   linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
   pinterest        :
   soundcloud       :
-  stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
+  stackoverflow    : "3965278/shahar"
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          :
+  twitter          : shaharkadmiel
   vine             :
   weibo            :
   xing             :
-  youtube          : # "https://youtube.com/c/MichaelRoseDesign"
+  youtube          : "https://www.youtube.com/ShaharShaniKadmiel"
 
 
 # Reading Files
