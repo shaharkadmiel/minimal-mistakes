@@ -3,6 +3,7 @@ title: Submitted my Dissertation today!
 tags: [Academia, PhD, Numerical Seismology, Wave Propagation, Ground Motion, Earthquakes, BGU, GSI, DST]
 header:
   overlay_image: /assets/images/phd_overview.png
+  overlay_filter: 0.5
   caption: "Figure credit: [**Shahar Shani-Kadmiel**](https://shaharkadmiel.github.io)"
   image_description: "Overview map of the Dead Sea Transform Fault System."
   cta_label: "Full size image"
@@ -14,8 +15,8 @@ published: true
 
 Todos:
 
-[√] Ph.D. dissertation submitted
-[ ] Secure a postdoc position
+- [x] Ph.D. dissertation submitted
+- [ ] Secure a postdoc position
 
 Yes... I finally submitted the final version of my Ph.D. dissertation today: [Seismic-Wave Propagation and Ground Motion Prediction During Strong Earthquakes - The Dead Sea Transform](https://www.researchgate.net/publication/299134542_Seismic-Wave_Propagation_and_Ground_Motion_Prediction_During_Strong_Earthquakes_-_The_Dead_Sea_Transform)
 
