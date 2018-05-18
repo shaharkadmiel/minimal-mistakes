@@ -4,6 +4,8 @@ header:
   overlay_image: /assets/images/header1.JPG
   caption: "Photo credit: [**Shahar Shani-Kadmiel**](https://shaharkadmiel.github.io)"
   image_description: "Ice skating on the frozen cannals on campus."
+  cta_label: "Full size image"
+  cta_url: /assets/images/header1.JPG
   show_overlay_excerpt: false
 author_profile: true
 published: true
