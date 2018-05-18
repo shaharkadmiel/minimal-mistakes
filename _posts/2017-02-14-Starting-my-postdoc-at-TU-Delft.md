@@ -1,5 +1,6 @@
 ---
 title: Starting my postdoc at TU Delft
+tags: [Academia, Job, Postdoc, Infrasound, Seismo-Acoustics, TU Delft, VIDI]
 header:
   overlay_image: /assets/images/header1.JPG
   caption: "Photo credit: [**Shahar Shani-Kadmiel**](https://shaharkadmiel.github.io)"
