@@ -1,7 +1,7 @@
 ---
-excerpt: "This post should display a **header with an overlay image**, if the theme supports it."
+excerpt: "February 14, 2017"
 header:
-  overlay_image: /assets/images/header1.JPG
+  image: /assets/images/header1.JPG
   caption: "Photo credit: [**Shahar Shani-Kadmiel**](https://shaharkadmiel.github.io)"
 published: true
 ---
