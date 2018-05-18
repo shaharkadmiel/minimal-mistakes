@@ -2,11 +2,11 @@
 title: Submitted my Dissertation today!
 tags: [Academia, PhD, Numerical Seismology, Wave Propagation, Ground Motion, Earthquakes, BGU, GSI, DST]
 header:
-  overlay_image: /assets/images/phd-overview.png
+  overlay_image: /assets/images/phd_overview.png
   caption: "Figure credit: [**Shahar Shani-Kadmiel**](https://shaharkadmiel.github.io)"
   image_description: "Overview map of the Dead Sea Transform Fault System."
   cta_label: "Full size image"
-  cta_url: /assets/images/phd-overview.png
+  cta_url: /assets/images/phd_overview.png
   show_overlay_excerpt: false
 author_profile: true
 published: true
