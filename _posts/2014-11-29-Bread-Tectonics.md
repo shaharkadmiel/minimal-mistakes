@@ -2,14 +2,6 @@
 title: Bread Tectonics
 tags: [Bread, Tectonics, Random stuff, Crust]
 excerpt: On the similarity between sourdough bread crust and the earth's crust.
-header:
-  overlay_image: /assets/images/bread_tectonics.jpg
-  # overlay_filter: rgba(255, 255, 255, 0.3)
-  caption: "Figure credit: [**Shahar Shani-Kadmiel**](https://shaharkadmiel.github.io)"
-  image_description: Bread and Mid Ocean Ridge morphology.
-  cta_label: Full size image
-  cta_url: /assets/images/bread_tectonics.jpg
-  show_overlay_excerpt: false
 author_profile: true
 published: true
 ---
