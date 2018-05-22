@@ -20,7 +20,7 @@ As a geoscientist, I cannot but notice the similar morphology of sourdough bread
 
 <figure class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/bread_tectonics.jpg" alt="Bread and Mid Ocean Ridge morphology">
-  <figcaption>Bread (*left*) and Mid Ocean Ridge (*right*) morphology.</figcaption>
+  <figcaption>Bread (<i>left</i>) and Mid Ocean Ridge (<i>right</i>) morphology.</figcaption>
 </figure> 
 
 <!-- ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/bread_tectonics.jpg){: .align-center} -->
