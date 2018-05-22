@@ -1,5 +1,6 @@
 ---
 title: About me and this blog
+permalink: /about/
 excerpt: I am a scientist, climber, avid programmer and much much more...
 header:
   overlay_image: /assets/images/header0.jpg
