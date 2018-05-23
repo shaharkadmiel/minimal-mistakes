@@ -35,8 +35,8 @@ figure.highlight {
     &.rouge-gutter {
       padding-right: 1em;
       width: 1em;
-      color: $base04;
-      border-right: 1px solid $base04;
+      color: $base03;
+      border-right: 1px solid $base03;
       text-align: right;
     }
 
@@ -62,7 +62,7 @@ figure.highlight {
 .highlight {
   .c {
     /* Comment */
-    color: $base04;
+    color: $base03;
   }
   .err {
     /* Error */
@@ -90,19 +90,19 @@ figure.highlight {
   }
   .cm {
     /* Comment.Multiline */
-    color: $base04;
+    color: $base03;
   }
   .cp {
     /* Comment.Preproc */
-    color: $base04;
+    color: $base03;
   }
   .c1 {
     /* Comment.Single */
-    color: $base04;
+    color: $base03;
   }
   .cs {
     /* Comment.Special */
-    color: $base04;
+    color: $base03;
   }
   .gd {
     /* Generic.Deleted */
@@ -123,7 +123,7 @@ figure.highlight {
   }
   .gp {
     /* Generic.Prompt */
-    color: $base04;
+    color: $base03;
     font-weight: bold;
   }
   .gs {
@@ -261,7 +261,7 @@ figure.highlight {
   }
   .sd {
     /* Literal.String.Doc */
-    color: $base04;
+    color: $base03;
   }
   .s2 {
     /* Literal.String.Double */
