@@ -131,7 +131,7 @@ for ax_ in ax:
 ```
 
 
-![png](hillshade_images/output_7_0.png)
+![png](/_posts/hillshade_images/output_7_0.png)
 
 
 ### Different ``scale`` and ``smooth`` parameters
@@ -164,7 +164,7 @@ for i, ((smooth_, scale_), ax_) in enumerate(zip(product(smooth, scale),
 ```
 
 
-![png](hillshade_images/output_9_0.png)
+![png](/_posts/hillshade_images/output_9_0.png)
 
 
 ### Different ``scale`` and ``normalization`` parameters
@@ -195,5 +195,5 @@ for i, ((normalize_, scale_), ax_) in enumerate(zip(product(normalize, scale),
 ```
 
 
-![png](hillshade_images/output_11_0.png)
+![png](/_posts/hillshade_images/output_11_0.png)
 
