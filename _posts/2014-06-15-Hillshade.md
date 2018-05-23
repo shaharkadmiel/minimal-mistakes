@@ -12,7 +12,7 @@ Following a great [blog post](http://rnovitsky.blogspot.nl/2010/04/using-hillsha
 ### This is the *hillshading* code:
 
 
-~~~ python
+```python linenos
 import numpy as np
 from scipy.ndimage import uniform_filter
 
@@ -88,7 +88,7 @@ def calc_intensity(relief, azimuth=315., altitude=45.,
                      (intensity - intensity.min()) / intensity.ptp())
 
     return intensity.clip(0, 1)
-~~~
+```
 
 ### Generate some sample data:
 
