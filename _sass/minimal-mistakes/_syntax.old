@@ -62,11 +62,11 @@ figure.highlight {
 .highlight {
   .c {
     /* Comment */
-    color: $base03;
+    color: $base04;
   }
   .err {
     /* Error */
-    color: $base0f;
+    color: $base08;
   }
   .k {
     /* Keyword */
@@ -78,7 +78,7 @@ figure.highlight {
   }
   .n {
     /* Name */
-    color: $base0a;
+    color: $base05;
   }
   .o {
     /* Operator */
@@ -90,19 +90,19 @@ figure.highlight {
   }
   .cm {
     /* Comment.Multiline */
-    color: $base03;
+    color: $base04;
   }
   .cp {
     /* Comment.Preproc */
-    color: $base03;
+    color: $base04;
   }
   .c1 {
     /* Comment.Single */
-    color: $base03;
+    color: $base04;
   }
   .cs {
     /* Comment.Special */
-    color: $base03;
+    color: $base04;
   }
   .gd {
     /* Generic.Deleted */
@@ -137,7 +137,7 @@ figure.highlight {
   }
   .kc {
     /* Keyword.Constant */
-    color: $base09;
+    color: $base0e;
   }
   .kd {
     /* Keyword.Declaration */
@@ -177,7 +177,7 @@ figure.highlight {
   }
   .nb {
     /* Name.Builtin */
-    color: $base0c;
+    color: $base05;
   }
   .nc {
     /* Name.Class */
@@ -185,7 +185,7 @@ figure.highlight {
   }
   .no {
     /* Name.Constant */
-    color: $base09;
+    color: $base08;
   }
   .nd {
     /* Name.Decorator */
@@ -193,7 +193,7 @@ figure.highlight {
   }
   .ni {
     /* Name.Entity */
-    color: $base0a;
+    color: $base05;
   }
   .ne {
     /* Name.Exception */
@@ -217,7 +217,7 @@ figure.highlight {
   }
   .py {
     /* Name.Property */
-    color: $base09;
+    color: $base05;
   }
   .nt {
     /* Name.Tag */
@@ -261,7 +261,7 @@ figure.highlight {
   }
   .sd {
     /* Literal.String.Doc */
-    color: $base03;
+    color: $base04;
   }
   .s2 {
     /* Literal.String.Double */
@@ -301,7 +301,7 @@ figure.highlight {
   }
   .vc {
     /* Name.Variable.Class */
-    color: $base0a;
+    color: $base08;
   }
   .vg {
     /* Name.Variable.Global */
