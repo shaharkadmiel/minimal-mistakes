@@ -13,9 +13,7 @@ As a geoscientist, I cannot but notice the similar morphology of sourdough bread
 <figure class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/bread_tectonics.jpg" alt="Bread and Mid Ocean Ridge morphology">
   <figcaption>Bread (<i>left</i>) and Mid Ocean Ridge (<i>right</i>) morphology.</figcaption>
-</figure> 
-
-<!-- ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/bread_tectonics.jpg){: .align-center} -->
+</figure>
 
 If you think about it, the dynamics are not completely different; In both cases there is pressure forming under the solidifying crust, forcing extension at the surface in order to make room for new upwelling material. In the bread's case this material is unbaked dough and in the Earth's crust case this is of course the molten magma of the asthenospheric mantle.
 
