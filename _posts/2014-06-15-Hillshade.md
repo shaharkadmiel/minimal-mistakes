@@ -7,7 +7,7 @@ author_profile: true
 published: true
 ---
 
-Following a great [blog post](http://rnovitsky.blogspot.nl/2010/04/using-hillshade-image-as-intensity.html) by Ran (Novitsky) Nof on an improved [matplotlib hillshading](http://rnovitsky.blogspot.nl/2010/04/using-hillshade-image-as-intensity.html) method, I decided to implement this method as well. I do it slightly different than Ran, mainly in the way I normalize the result.
+Following a great [blog post](http://rnovitsky.blogspot.nl/2010/04/using-hillshade-image-as-intensity.html) by Ran (Novitsky) Nof on an improved [matplotlib hillshading](http://rnovitsky.blogspot.nl/2010/04/using-hillshade-image-as-intensity.html) method, I decided to implement this method as well. I do it slightly differently than Ran, mainly in the way I normalize the intensity of the illumination result.
 
 ### This is the *hillshading* code:
 
