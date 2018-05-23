@@ -35,8 +35,8 @@ figure.highlight {
     &.rouge-gutter {
       padding-right: 1em;
       width: 1em;
-      color: $base06;
-      border-right: 1px solid $base06;
+      color: $base03;
+      border-right: 1px solid $base03;
       text-align: right;
     }
 
@@ -237,19 +237,19 @@ figure.highlight {
   }
   .mf {
     /* Literal.Number.Float */
-    color: $base09;
+    color: $base0c;
   }
   .mh {
     /* Literal.Number.Hex */
-    color: $base09;
+    color: $base0c;
   }
   .mi {
     /* Literal.Number.Integer */
-    color: $base09;
+    color: $base0c;
   }
   .mo {
     /* Literal.Number.Oct */
-    color: $base09;
+    color: $base0c;
   }
   .sb {
     /* Literal.String.Backtick */
