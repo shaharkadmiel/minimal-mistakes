@@ -113,7 +113,7 @@ data = sample_data()
 
 fig, ax = plt.subplots(ncols=2, figsize=(8,3))
 
-im = ax[0].imshow(data, interpolation='bilinear', cmap="Greys_r")
+im = ax[0].imshow(data, interpolation='bilinear', cmap='Greys_r')
 ax[0].set_title('relief')
 plt.colorbar(im, ax=ax[0])
 
@@ -121,7 +121,7 @@ plt.colorbar(im, ax=ax[0])
 illumination = calc_intensity(data)
 
 im = ax[1].imshow(illumination,
-                  interpolation='bilinear', cmap="Greys_r",
+                  interpolation='bilinear', cmap='Greys_r',
                   vmin=0, vmax=1)
 ax[1].set_title('illumination')
 plt.colorbar(im, ax=ax[1])
@@ -154,7 +154,7 @@ for i, ((smooth_, scale_), ax_) in enumerate(zip(product(smooth, scale),
     # calculate illumination intensity with scale and smooth params
     illumination = calc_intensity(data, scale=scale_, smooth=smooth_)
     ax_.imshow(illumination,
-               interpolation='bilinear', cmap="Greys_r",
+               interpolation='bilinear', cmap='Greys_r',
                vmin=0, vmax=1)
     ax_.set_xticks([])
     ax_.set_yticks([])
@@ -184,7 +184,7 @@ for i, ((normalize_, scale_), ax_) in enumerate(zip(product(normalize, scale),
     # calculate illumination intensity with scale and normalize params
     illumination = calc_intensity(data, scale=scale_, normalize=normalize_)
     ax_.imshow(illumination,
-               interpolation='bilinear', cmap="Greys_r",
+               interpolation='bilinear', cmap='Greys_r',
                vmin=0, vmax=1)
     ax_.set_xticks([])
     ax_.set_yticks([])
