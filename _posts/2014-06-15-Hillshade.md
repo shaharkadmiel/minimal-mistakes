@@ -12,7 +12,7 @@ Following a great [blog post](http://rnovitsky.blogspot.nl/2010/04/using-hillsha
 ### This is the *hillshading* code:
 
 
-```python linenos
+```python
 import numpy as np
 from scipy.ndimage import uniform_filter
 
