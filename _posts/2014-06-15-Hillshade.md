@@ -1,7 +1,8 @@
 ---
 title: Hillshade
 tags: [Python, Matplotlib, Hillshade, Shaded relief]
-excerpt: On the similarity between sourdough bread crust and the earth's crust.
+excerpt: Hillshading code.
+classes: wide
 author_profile: true
 published: true
 ---
