@@ -59,5 +59,5 @@ and pick a random item:
 {% assign items = "one, two, three, four" | split: ',' %}
 {{ items | inspect }}
 
-{{ items | sample}}
+{{ items | sample }}
 
