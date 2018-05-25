@@ -39,3 +39,4 @@ I have placed all the header images that I would like to randomize in ``/assets/
 {% endfor %}
 
 {{ headers | inspect}}
+{{ headers | jsonify}}
