@@ -24,5 +24,5 @@ Having a random header on reload is a neat feature. Here is my attempt to accomp
         <img src="{{ site.baseurl }}{{ image.path }}" alt="header" />
     {% endif %}
 {% endfor %}
-
-{% assign headers = site.static_files | where: "path" contains '/assets/images/headers/' %}
+<!-- 
+{% assign headers = site.static_files | where: "path" contains '/assets/images/headers/' %} -->
