@@ -36,7 +36,7 @@ I have placed all the header images that I would like to randomize in ``/assets/
     {% endif %}
 {% endfor %}
 
-{{ site.baseurl }}{{ image.path }}
+{{ site.baseurl | inspect }}{{ image.path | inspect}}
 
 We can now have a look at what is stored in the ``headers`` array with:
 
