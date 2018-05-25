@@ -22,7 +22,7 @@ I have placed all the header images that I would like to randomize in ``/assets/
 {% for image in site.static_files %}
     {% if image.path contains '/assets/images/headers/' %}
         <!-- add image -->
-        {% assign headers = headers | push: "{{ site.baseurl }}{{ image.path }}" %}
+        {% assign headers = headers | push: {{ site.baseurl }}{{ image.path }} %}
     {% endif %}
 {% endfor %}
 
@@ -34,7 +34,7 @@ I have placed all the header images that I would like to randomize in ``/assets/
 
 {% for image in site.static_files %}
     {% if image.path contains '/assets/images/headers/' %}
-        {% assign headers = headers | push: "{{ site.baseurl }}{{ image.path }}" %}
+        {% assign headers = headers | push: {{ site.baseurl }}{{ image.path }} %}
     {% endif %}
 {% endfor %}
 
