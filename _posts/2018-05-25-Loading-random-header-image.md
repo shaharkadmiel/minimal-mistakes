@@ -46,7 +46,7 @@ We can now have a look at what is stored in the ``headers`` array with:
 
 {{ headers | inspect }}
 
-### Pick a random header:
+### Pick a random header
 
 Using the ``sample`` filter we get a random item from the ``headers`` array.
 
