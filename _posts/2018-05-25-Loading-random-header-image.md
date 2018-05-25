@@ -52,4 +52,9 @@ and pick a random item:
 
 {{ random-header | inspect }}
 
+{% assign images = {{ site.static_files | where_exp: "item", "item.path contains '/assets/images/headers/'"}} %}
+
+{{ images | inspect }}
+
+
 
