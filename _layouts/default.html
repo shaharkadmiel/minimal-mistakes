@@ -12,6 +12,19 @@
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+
+    <script type="text/javascript">
+
+    var headersJS = [
+      {% assign headers = "" | split: ',' %}
+
+      {% for image in site.static_files %}
+          {% if image.path contains '/assets/images/headers/' %}
+              {% assign headers = headers | push: image.path %}
+          {% endif %}
+      {% endfor %}];
+    </script>
+
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">

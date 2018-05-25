@@ -7,6 +7,12 @@ author_profile: true
 published: true
 ---
 
+<script type="text/javascript">
+    var headersJS;
+
+    document.write('<p>' + headersJS + '</p>');
+</script>
+
 Having a random header on reload is a neat feature. Here is my attempt to accomplish that:
 
 ### Loop through header images and construct a list
