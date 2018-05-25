@@ -48,7 +48,7 @@ We can now have a look at what is stored in the ``headers`` array with:
 
 and pick a random item:
 
-{% assign random-header = {{ headers | sample }} %}
+{% assign random-header = headers | sample %}
 
 {{ random-header | inspect }}
 
@@ -56,5 +56,8 @@ and pick a random item:
 
 {{ images | inspect }}
 
+{% assign items = "one, two, three, four" | split: ',' %}
+{{ items | inspect }}
 
+{{ items | sample}}
 
