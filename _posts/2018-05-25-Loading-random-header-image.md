@@ -52,6 +52,6 @@ and pick a random item:
 
 {{ random-header | inspect }}
 
-{% assign files = site.static_files | split ',' %}
+{% assign files = site.static_files %}
 {{ files | inspect }}
 
