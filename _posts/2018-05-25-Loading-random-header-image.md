@@ -36,8 +36,6 @@ I have placed all the header images that I would like to randomize in ``/assets/
     {% endif %}
 {% endfor %}
 
-{{ site.baseurl | inspect }}{{ image.path | inspect}}
-
 We can now have a look at what is stored in the ``headers`` array with:
 
 {% raw %}
@@ -53,4 +51,6 @@ and pick a random item:
 {% assign random-header = {{ headers | sample }} %}
 
 {{ random-header | inspect }}
+
+{{ site.static_files | inspect }}
 
