@@ -28,7 +28,7 @@ I have placed all the header images that I would like to randomize in ``/assets/
 ```
 {% endraw %}
 
-{% assign headers = "" | split: ',' %}
+{% assign headers = "" %}
 
 {% for image in site.static_files %}
     {% if image.path contains '/assets/images/headers/' %}
