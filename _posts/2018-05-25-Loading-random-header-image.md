@@ -15,7 +15,7 @@ Having a random header on reload is a neat feature. Here is my attempt to accomp
 ```liquid
 {% for image in site.static_files %}
     {% if image.path contains '/assets/images/headers/' %}
-        <img src="{{ site.baseurl }}{{ image.path }}" alt="header" />
+<img src="{{ site.baseurl }}{{ image.path }}" alt="header" />
     {% endif %}
 {% endfor %}
 ```
@@ -23,6 +23,6 @@ Having a random header on reload is a neat feature. Here is my attempt to accomp
 
 {% for image in site.static_files %}
     {% if image.path contains '/assets/images/headers/' %}
-        <img src="{{ site.baseurl }}{{ image.path }}" alt="header" />
+<img src="{{ site.baseurl }}{{ image.path }}" alt="header" />
     {% endif %}
 {% endfor %}
