@@ -9,7 +9,7 @@ published: true
 
 Having a random header on reload is a neat feature. Here is my attempt to accomplish that:
 
-### Loop through header images construct a list
+### Loop through header images and construct a list
 
 I have placed all the header images that I would like to randomize in ``/assets/images/headers/``. So I want to loop over all ``site.static_files`` and add only the images within that specific folder to my list.
 
@@ -38,4 +38,4 @@ I have placed all the header images that I would like to randomize in ``/assets/
     {% endif %}
 {% endfor %}
 
-{{ headers }}
+{{ headers | inspect}}
