@@ -58,12 +58,3 @@ and pick a random item with:
 {% assign random-header = headers | sample %}
 {{ random-header | inspect }}
 
-{% assign images = site.static_files | where_exp: "item", "item.path contains '/assets/images/headers/'" %}
-
-{{ images | inspect }}
-
-{% assign items = "one, two, three, four" | split: ',' %}
-{{ items | inspect }}
-
-{{ items | sample }}
-
