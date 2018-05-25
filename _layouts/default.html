@@ -15,14 +15,7 @@
 
     <script type="text/javascript">
 
-    var headersJS = [
-      {% assign headers = "" | split: ',' %}
-
-      {% for image in site.static_files %}
-          {% if image.path contains '/assets/images/headers/' %}
-              {% assign headers = headers | push: image.path %}
-          {% endif %}
-      {% endfor %}];
+    var headersJS = [{% for image in site.static_files %}{% if image.path contains '/assets/images/headers/' %}"{{ site.baseurl }}{{ image.path }}"{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}];
     </script>
 
   </head>
