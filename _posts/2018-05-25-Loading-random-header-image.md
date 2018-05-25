@@ -36,6 +36,8 @@ I have placed all the header images that I would like to randomize in ``/assets/
     {% endif %}
 {% endfor %}
 
+{% assign headers = headers | split: ',' %}
+
 We can now have a look at what is stored in the ``headers`` array with:
 
 {% raw %}
