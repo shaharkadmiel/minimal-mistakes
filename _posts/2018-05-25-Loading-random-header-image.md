@@ -46,13 +46,19 @@ We can now have a look at what is stored in the ``headers`` array with:
 
 {{ headers | inspect }}
 
-and pick a random item:
+and pick a random item with:
+
+{% raw %}
+```liquid
+{% assign random-header = headers | sample %}
+{{ random-header | inspect }}
+```
+{% endraw %}
 
 {% assign random-header = headers | sample %}
-
 {{ random-header | inspect }}
 
-{% assign images = {{ site.static_files | where_exp: "item", "item.path contains '/assets/images/headers/'"}} %}
+{% assign images = site.static_files | where_exp: "item", "item.path contains '/assets/images/headers/'" %}
 
 {{ images | inspect }}
 
