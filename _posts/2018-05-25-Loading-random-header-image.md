@@ -8,9 +8,12 @@ published: true
 ---
 
 <script type="text/javascript">
+    var randomIndex;
     var headersJS;
 
-    document.write('<p>' + headersJS + '</p>');
+    randomIndex = Math.floor(Math.random() * headersJS.length);
+
+    document.write('<p>' + headersJS[randomIndex] + '</p>');
 </script>
 
 Having a random header on reload is a neat feature. Here is my attempt to accomplish that:
