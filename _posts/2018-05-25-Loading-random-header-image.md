@@ -42,8 +42,15 @@ We can now have a look at what is stored in the ``headers`` array with:
 
 {% raw %}
 ```liquid
-{{ headers | inspect}}
+{{ headers | inspect }}
 ```
 {% endraw %}
 
-{{ headers | inspect}}
+{{ headers | inspect }}
+
+and pick a random item:
+
+{% assign random-header = {{ headers | sample }} %}
+
+{{ random-header | inspect }}
+
