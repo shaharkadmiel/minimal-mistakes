@@ -28,15 +28,13 @@ I have placed all the header images that I would like to randomize in ``/assets/
 ```
 {% endraw %}
 
-{% assign headers = "" %}
+{% assign headers = "" | split: ',' %}
 
 {% for image in site.static_files %}
     {% if image.path contains '/assets/images/headers/' %}
         {% assign headers = headers | push: image.path %}
     {% endif %}
 {% endfor %}
-
-{% assign headers = headers | split: ',' %}
 
 We can now have a look at what is stored in the ``headers`` array with:
 
