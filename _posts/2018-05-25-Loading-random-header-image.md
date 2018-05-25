@@ -46,7 +46,9 @@ We can now have a look at what is stored in the ``headers`` array with:
 
 {{ headers | inspect }}
 
-and pick a random item with:
+### Pick a random header:
+
+Using the ``sample`` filter we get a random item from the ``headers`` array.
 
 {% raw %}
 ```liquid
@@ -58,3 +60,4 @@ and pick a random item with:
 {% assign random-header = headers | sample %}
 {{ random-header | inspect }}
 
+The problem is that because Jekyll is a static site generator, this happens when the static page is built and not on reload. So we need to encapsulate this in a Javascript.
