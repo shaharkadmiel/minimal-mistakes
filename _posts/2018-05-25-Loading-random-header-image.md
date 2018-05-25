@@ -22,7 +22,7 @@ I have placed all the header images that I would like to randomize in ``/assets/
 {% for image in site.static_files %}
     {% if image.path contains '/assets/images/headers/' %}
         <!-- add image -->
-        {% assign headers = headers | push: image %}
+        {% assign headers = headers | push: image.path %}
     {% endif %}
 {% endfor %}
 ```
@@ -38,13 +38,12 @@ I have placed all the header images that I would like to randomize in ``/assets/
 
 {{ site.baseurl }}{{ image.path }}
 
-We can now have a look at what is stored in the ``headers`` array:
+We can now have a look at what is stored in the ``headers`` array with:
 
-<ul>
-    {% for item in {{ headers }} %}
-        <li>item</li>
-    {% endfor %}
-</ul>
+{% raw %}
+```liquid
+{{ headers | inspect}}
+```
+{% endraw %}
 
 {{ headers | inspect}}
-{{ headers | jsonify}}
