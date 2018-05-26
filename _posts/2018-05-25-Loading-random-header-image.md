@@ -112,8 +112,9 @@ On every page that you want to randomize the header image place the following Ja
 
     randomIndex = Math.floor(Math.random() * headers.length);
 
-    var header = headers[randomIndex];
-    {% assign page.header.image = headers[randomIndex] %}
+    <div class="page__hero" style=" ">
+        <img src=headers[randomIndex] alt="Random header image" class="page__hero-image">
+    </div>
 </script>
 
 {{ page.header.image | inspect }}
