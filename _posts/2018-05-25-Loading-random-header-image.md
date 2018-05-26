@@ -1,8 +1,7 @@
 ---
 title: Randomizing header image
 header:
-  image: <script type="text/javascript"> var randomIndex;
-    var headers; randomIndex = Math.floor(Math.random() * headers.length); document.write(headers[randomIndex]); </script>
+  image: /assets/images/headers/kalymnos.jpg
 tags: [Random stuff, Images, Jekyll, Liquid, JavaScript]
 # excerpt: Hillshading code.
 classes: wide
@@ -113,7 +112,7 @@ On every page that you want to randomize the header image place the following Ja
 
     randomIndex = Math.floor(Math.random() * headers.length);
 
-    document.write('<p>' + headers[randomIndex] + '</p>');
+    var header = headers[randomIndex];
     {% assign page.header.image = headers[randomIndex] %}
 </script>
 
