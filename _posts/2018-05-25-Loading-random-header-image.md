@@ -2,7 +2,8 @@
 title: Randomizing header image
 header:
   overlay_image: random
-  caption: "Image subject to copyright: [**Shahar Shani-Kadmiel, ©**](https://shaharkadmiel.github.io)"
+  overlay_filter: rgba(255, 255, 255, 0.3)
+  caption: "Image subject to Copyright: [**© Shahar Shani-Kadmiel ©**](https://shaharkadmiel.github.io)"
 tags: [Random stuff, Images, Jekyll, Liquid, JavaScript, jQuery, Hacking]
 toc: true
 toc_label: "Contents"
@@ -69,7 +70,7 @@ The problem is that because Jekyll is a static site generator, this happens when
 
 ## <a id="solution"></a>The solution
 
-I found this very helpfull [post](https://thornelabs.net/2014/01/19/display-random-jekyll-posts-during-each-page-load-or-refresh-using-javascript.html) by *James W Thorne* that mixes Liquid code and JavaScript code. This may not be the most elegant solution but id works. Several files need to be modified for this to work.
+I found this very helpfull [post](https://thornelabs.net/2014/01/19/display-random-jekyll-posts-during-each-page-load-or-refresh-using-javascript.html) by *James W Thorne* that mixes Liquid code and JavaScript code. This may not be the most elegant solution but id works.
 
 ### default.html layout
 
@@ -117,23 +118,6 @@ The first line loads the [jQuery](http://jquery.com/) library that will be used 
 ```
 {% endraw %}
 
-Lines 8-10 above make use of jQuery in order to set the ``src`` attribute of the element which has ``id='headerIMG'``. Now, in order to access this element by its ``id``, I edited ``_includes/page__hero.html``.
+Lines 8-15 above make use of jQuery in order to set the ``src`` attribute of the ``.page__hero-image`` class in the case of ``image:`` or the ``css`` ``background-image`` ``url`` of the ``.page__hero--overlay`` class in the case of ``overlay_image:``.
 
-### page__hero.html
-
-In the ``<div class="page__hero ...``, there is a distinction between ``page.header.overlay_color`` and ``page.header.overlay_image``, which are treated differently than other cases in which there is only ``image:`` defined in the front matter. This means that we also have to treat these cases differently.
-
-To make the ``<img ...`` element accessable by ``id`` I simply added ``id-'headerIMG'`` to the element so the line becomes:
-
-{% raw %}
-```html
-<img id='headerIMG' src="{{ img_path }}" alt="{{ image_description }}" class="page__hero-image">
-```
-{% endraw %}
-
-
-Every other layout is initially dependent on the default layout so the ``headers`` variable set within the above script is available in the current page.
-
-On every page that you want to randomize the header image place the following JavaScript code:
-
-{{ page.header.image | inspect }}
+Every other layout is initially dependent on the default layout so header ``image`` or ``image-overlay`` can be randomized in all layouts. Simply set ``image: random`` or ``image-overlay: random`` in the front matter and you are set.
