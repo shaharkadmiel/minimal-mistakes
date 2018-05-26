@@ -88,21 +88,10 @@ I added the following JavaScript/Liquid mix to the ``<head>`` section of the ``d
         {% unless forloop.last %},{% endunless %}
     {% endif %}
   {% endfor %}];
-</script>
-```
-{% endraw %}
-\* *everything in the square brackets must be one line. Lines here are broken for readability*
 
-The first line loads the [jQuery](http://jquery.com/) library that will be used in the next code snippet which goes in the ``body`` section:
+  {% if page.header.image == 'random' or page.header.overlay_image == 'random' %}
 
-{% raw %}
-```html
-{% if page.header.image == 'random' or page.header.overlay_image == 'random' %}
-  <script type="text/javascript">
-    var randomIndex;
-    var headers;
-
-    randomIndex = Math.floor(Math.random() * headers.length);
+    var randomIndex = Math.floor(Math.random() * headers.length);
 
     {% if page.header.image == 'random' %}
       $(document).ready(function() {
@@ -113,11 +102,12 @@ The first line loads the [jQuery](http://jquery.com/) library that will be used 
         $(".page__hero--overlay").css('background-image', 'url(' + headers[randomIndex] + ')');
       });
     {% endif %}
-  </script>
-{% endif %}
+  {% endif %}
+</script>
 ```
 {% endraw %}
+\* *everything in the square brackets between lines 4 and 10 must be one line. Lines here are broken for readability*
 
-Lines 8-15 above make use of jQuery in order to set the ``src`` attribute of the ``.page__hero-image`` class in the case of ``image:`` or the ``css`` ``background-image`` ``url`` of the ``.page__hero--overlay`` class in the case of ``overlay_image:``.
+The first line loads the [jQuery](http://jquery.com/) library that is used in lines 8-15 in order to set the ``src`` attribute of the ``.page__hero-image`` class in the case of ``image:`` or the ``css`` ``background-image`` ``url`` of the ``.page__hero--overlay`` class in the case of ``overlay_image:``.
 
 Every other layout is initially dependent on the default layout so header ``image`` or ``image-overlay`` can be randomized in all layouts. Simply set ``image: random`` or ``image-overlay: random`` in the front matter and you are set.
