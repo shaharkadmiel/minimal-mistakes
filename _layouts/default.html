@@ -32,6 +32,10 @@
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
+    <div class="initial-content">
+      {{ content }}
+    </div>
+
     {% if page.header.image == 'random' or page.header.overlay_image == 'random' %}
       <script type="text/javascript">
         var randomIndex;
@@ -50,10 +54,6 @@
         {% endif %}
       </script>
     {% endif %}
-
-    <div class="initial-content">
-      {{ content }}
-    </div>
 
     {% if site.search == true %}
       <div class="search-content">
