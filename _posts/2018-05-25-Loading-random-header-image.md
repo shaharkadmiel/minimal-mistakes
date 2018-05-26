@@ -4,7 +4,9 @@ title: Randomizing header image
 #   image: random
 tags: [Random stuff, Images, Jekyll, Liquid, JavaScript]
 # excerpt: Hillshading code.
-classes: wide
+# classes: wide
+toc: true
+toc_label: "Contents"
 author_profile: true
 published: true
 ---
