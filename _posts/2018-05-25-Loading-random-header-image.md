@@ -108,6 +108,6 @@ I added the following JavaScript/Liquid mix to the ``<head>`` section of the ``d
 {% endraw %}
 \* *everything in the square brackets between lines 4 and 10 must be one line. Lines here are broken for readability*
 
-The first line loads the [jQuery](http://jquery.com/) library that is used in lines 8-15 in order to set the ``src`` attribute of the ``.page__hero-image`` class in the case of ``image:`` or the ``css`` ``background-image`` ``url`` of the ``.page__hero--overlay`` class in the case of ``overlay_image:``.
+The first line loads the [jQuery](http://jquery.com/) library that is used in lines 16-23 in order to set the ``src`` attribute of the ``.page__hero-image`` class in the case of ``image:`` or the ``css`` ``background-image`` ``url`` of the ``.page__hero--overlay`` class in the case of ``overlay_image:``.
 
 Every other layout is initially dependent on the default layout so header ``image`` or ``image-overlay`` can be randomized in all layouts. Simply set ``image: random`` or ``image-overlay: random`` in the front matter and you are set.
