@@ -87,7 +87,7 @@ I found this very helpfull [post](https://thornelabs.net/2014/01/19/display-rand
 </script>
 ```
 {% endraw %}
-\* *everything in the square brackets must be one line. Lines here are brokes for readability*
+\* *everything in the square brackets must be one line. Lines here are broken for readability*
 
 Every other layout is initially dependent on the default layout so the ``headers`` variable set within the above script is available in the current page.
 
@@ -113,7 +113,7 @@ On every page that you want to randomize the header image place the following Ja
     randomIndex = Math.floor(Math.random() * headers.length);
 
     document.write('<p>' + headers[randomIndex] + '</p>');
-    {{ page.header.image | inspect }}
+    {{ page.header.image = headers[randomIndex] }}
 </script>
 
 {{ page.header.image | inspect }}
