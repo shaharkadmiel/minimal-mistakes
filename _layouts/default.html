@@ -32,16 +32,22 @@
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
-    {% if page.header.image == 'random' %}
+    {% if page.header.image == 'random' or page.header.overlay_image == 'random' %}
       <script type="text/javascript">
         var randomIndex;
         var headers;
 
         randomIndex = Math.floor(Math.random() * headers.length);
 
-        $(document).ready(function() {
+        {% if page.header.image == 'random' %}
+          $(document).ready(function() {
             $(".page__hero-image").attr('src', headers[randomIndex]);
-        });
+          });
+        {% elsif page.header.overlay_image == 'random' %}
+          $(document).ready(function() {
+            $(".page__hero--overlay").css('background-image', 'url(' + headers[randomIndex] + ')');
+          });
+        {% endif %}
       </script>
     {% endif %}
 

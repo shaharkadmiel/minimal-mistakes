@@ -26,10 +26,10 @@ I have placed all the header images that I would like to randomize in ``/assets/
 
 <!-- loop and add -->
 {% for image in site.static_files %}
-    {% if image.path contains '/assets/images/headers/' %}
-        <!-- add image -->
-        {% assign headers = headers | push: image.path %}
-    {% endif %}
+  {% if image.path contains '/assets/images/headers/' %}
+    <!-- add image -->
+    {% assign headers = headers | push: image.path %}
+  {% endif %}
 {% endfor %}
 ```
 {% endraw %}
@@ -81,13 +81,13 @@ I added the following JavaScript/Liquid mix to the ``<head>`` section of the ``d
 <script src="/assets/js/vendor/jquery/jquery-3.3.1.min.js" type="text/javascript"></script>
 
 <script type="text/javascript">
-    var headers = [
-    {% for image in site.static_files %}
-        {% if image.path contains '/assets/images/headers/' %}
-            "{{ site.baseurl }}{{ image.path }}"
-                {% unless forloop.last %},{% endunless %}
-        {% endif %}
-    {% endfor %}];
+  var headers = [
+  {% for image in site.static_files %}
+    {% if image.path contains '/assets/images/headers/' %}
+      "{{ site.baseurl }}{{ image.path }}"
+        {% unless forloop.last %},{% endunless %}
+    {% endif %}
+  {% endfor %}];
 </script>
 ```
 {% endraw %}
@@ -98,21 +98,22 @@ The first line loads the [jQuery](http://jquery.com/) library that will be used 
 {% raw %}
 ```html
 {% if page.header.image == 'random' or page.header.overlay_image == 'random' %}
-    <script type="text/javascript">
-        var randomIndex;
-        var headers;
+  <script type="text/javascript">
+    var randomIndex;
+    var headers;
 
-        randomIndex = Math.floor(Math.random() * headers.length);
+    randomIndex = Math.floor(Math.random() * headers.length);
 
-        {% if page.header.image == 'random' %}
-            $(document).ready(function() {
-                $("#headerIMG").attr('src', headers[randomIndex]);
-            });
-        {% else %}
-            $(document).ready(function() {
-                $("#headerIMG").attr('src', headers[randomIndex]);
-            });
-    </script>
+    {% if page.header.image == 'random' %}
+      $(document).ready(function() {
+        $(".page__hero-image").attr('src', headers[randomIndex]);
+      });
+    {% elsif page.header.overlay_image == 'random' %}
+      $(document).ready(function() {
+        $(".page__hero--overlay").css('background-image', 'url(' + headers[randomIndex] + ')');
+      });
+    {% endif %}
+  </script>
 {% endif %}
 ```
 {% endraw %}
