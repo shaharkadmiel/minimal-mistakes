@@ -23,6 +23,22 @@
 
       var headers = [{% for image in site.static_files %}{% if image.path contains '/assets/images/headers/' %}"{{ site.baseurl }}{{ image.path }}",{% endif %}{% endfor %}];
 
+      {% if page.header.image == 'random' or page.header.overlay_image == 'random' %}
+
+          var randomIndex = Math.floor(Math.random() * headers.length);
+
+          {% if page.header.image == 'random' %}
+            $(document).ready(function() {
+              $(".page__hero-image").attr('src', headers[randomIndex]);
+            });
+          {% elsif page.header.overlay_image == 'random' %}
+            $(document).ready(function() {
+              $(".page__hero--overlay").css('background-image', 'url(' + headers  [randomIndex] + ')');
+            });
+          {% endif %}
+        </script>
+      {% endif %}
+
     </script>
 
   </head>
@@ -35,25 +51,6 @@
     <div class="initial-content">
       {{ content }}
     </div>
-
-    {% if page.header.image == 'random' or page.header.overlay_image == 'random' %}
-      <script type="text/javascript">
-        var randomIndex;
-        var headers;
-
-        randomIndex = Math.floor(Math.random() * headers.length);
-
-        {% if page.header.image == 'random' %}
-          $(document).ready(function() {
-            $(".page__hero-image").attr('src', headers[randomIndex]);
-          });
-        {% elsif page.header.overlay_image == 'random' %}
-          $(document).ready(function() {
-            $(".page__hero--overlay").css('background-image', 'url(' + headers[randomIndex] + ')');
-          });
-        {% endif %}
-      </script>
-    {% endif %}
 
     {% if site.search == true %}
       <div class="search-content">
