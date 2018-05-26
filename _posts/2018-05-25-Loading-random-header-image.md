@@ -1,7 +1,7 @@
 ---
 title: Randomizing header image
-header:
-  image: random
+# header:
+#   image: random
 tags: [Random stuff, Images, Jekyll, Liquid, JavaScript]
 # excerpt: Hillshading code.
 classes: wide
@@ -68,10 +68,16 @@ The problem is that because Jekyll is a static site generator, this happens when
 
 ## The solution
 
-I found this very helpfull [post](https://thornelabs.net/2014/01/19/display-random-jekyll-posts-during-each-page-load-or-refresh-using-javascript.html) by *James W Thorne* that mixes Liquid code and JavaScript code. I added the following JavaScript/Liquid mix to the ``<head>`` section of the ``default.html`` layout:
+I found this very helpfull [post](https://thornelabs.net/2014/01/19/display-random-jekyll-posts-during-each-page-load-or-refresh-using-javascript.html) by *James W Thorne* that mixes Liquid code and JavaScript code. This may not be the most elegant solution but id works. Several files need to be modified for this to work.
+
+### default.html layout
+
+I added the following JavaScript/Liquid mix to the ``<head>`` section of the ``default.html`` layout:
 
 {% raw %}
-```javascript
+```html
+<script src="/assets/js/vendor/jquery/jquery-3.3.1.min.js" type="text/javascript"></script>
+
 <script type="text/javascript">
     var headers = [
     {% for image in site.static_files %}
@@ -88,7 +94,7 @@ I found this very helpfull [post](https://thornelabs.net/2014/01/19/display-rand
 And place the following code in the ``body`` section:
 
 {% raw %}
-```javascript
+```html
 {% if page.header.image == 'random' %}
     <script type="text/javascript">
         var randomIndex;
