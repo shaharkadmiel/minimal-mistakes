@@ -1,10 +1,9 @@
 ---
 title: Randomizing header image
 header:
-  image: random
-tags: [Random stuff, Images, Jekyll, Liquid, JavaScript]
-# excerpt: Hillshading code.
-# classes: wide
+  overlay_image: random
+  caption: "Image subject to copyright: [**Shahar Shani-Kadmiel, ©**](https://shaharkadmiel.github.io)"
+tags: [Random stuff, Images, Jekyll, Liquid, JavaScript, jQuery, Hacking]
 toc: true
 toc_label: "Contents"
 author_profile: true
