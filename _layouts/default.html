@@ -19,7 +19,7 @@
     -->
     <script type="text/javascript">
 
-    var headers = [{% for image in site.static_files %}{% if image.path contains '/assets/images/headers/' %}"{{ site.baseurl }}{{ image.path }}"{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}];
+    var headers = [{% for image in site.static_files %}{% if image.path contains '/assets/images/headers/' %}"{{ site.baseurl }}{{ image.path }}",{% endif %}{% endfor %}];
     </script>
 
   </head>
