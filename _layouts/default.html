@@ -13,9 +13,13 @@
     {% include head.html %}
     {% include head/custom.html %}
 
+    <!--
+      Javascript and Liquid code to gather a list of all header images
+      in /assets/images/headers/
+    -->
     <script type="text/javascript">
 
-    var headersJS = [{% for image in site.static_files %}{% if image.path contains '/assets/images/headers/' %}"{{ site.baseurl }}{{ image.path }}"{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}];
+    var headers = [{% for image in site.static_files %}{% if image.path contains '/assets/images/headers/' %}"{{ site.baseurl }}{{ image.path }}"{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}];
     </script>
 
   </head>
