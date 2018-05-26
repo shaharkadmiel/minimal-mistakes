@@ -1,7 +1,7 @@
 ---
 title: Randomizing header image
-# header:
-#   image: random
+header:
+  image: random
 tags: [Random stuff, Images, Jekyll, Liquid, JavaScript]
 # excerpt: Hillshading code.
 # classes: wide
@@ -11,7 +11,7 @@ author_profile: true
 published: true
 ---
 
-Having a random header on reload is a neat feature. Here is my first attempt to accomplish that:
+Having a random header on reload is a neat feature. I have included my initial attempt but you can skip directly to the [solution](#solution) below.
 
 ## The initial idea
 
@@ -68,7 +68,7 @@ Using the ``sample`` filter we get a random item from the ``headers`` array.
 
 The problem is that because Jekyll is a static site generator, this happens when the static page is built and not on reload. So we need to encapsulate this in a JavaScript that is executed every time a page is reloaded.
 
-## The solution
+## <a id="solution"></a>The solution
 
 I found this very helpfull [post](https://thornelabs.net/2014/01/19/display-random-jekyll-posts-during-each-page-load-or-refresh-using-javascript.html) by *James W Thorne* that mixes Liquid code and JavaScript code. This may not be the most elegant solution but id works. Several files need to be modified for this to work.
 
@@ -93,22 +93,41 @@ I added the following JavaScript/Liquid mix to the ``<head>`` section of the ``d
 {% endraw %}
 \* *everything in the square brackets must be one line. Lines here are broken for readability*
 
-And place the following code in the ``body`` section:
+The first line loads the [jQuery](http://jquery.com/) library that will be used in the next code snippet which goes in the ``body`` section:
 
 {% raw %}
 ```html
-{% if page.header.image == 'random' %}
+{% if page.header.image == 'random' or page.header.overlay_image == 'random' %}
     <script type="text/javascript">
         var randomIndex;
         var headers;
 
         randomIndex = Math.floor(Math.random() * headers.length);
 
-        $(document).ready(function() {
-            $("#headerIMG").attr('src', headers[randomIndex]);
-        });
+        {% if page.header.image == 'random' %}
+            $(document).ready(function() {
+                $("#headerIMG").attr('src', headers[randomIndex]);
+            });
+        {% else %}
+            $(document).ready(function() {
+                $("#headerIMG").attr('src', headers[randomIndex]);
+            });
     </script>
 {% endif %}
+```
+{% endraw %}
+
+Lines 8-10 above make use of jQuery in order to set the ``src`` attribute of the element which has ``id='headerIMG'``. Now, in order to access this element by its ``id``, I edited ``_includes/page__hero.html``.
+
+### page__hero.html
+
+In the ``<div class="page__hero ...``, there is a distinction between ``page.header.overlay_color`` and ``page.header.overlay_image``, which are treated differently than other cases in which there is only ``image:`` defined in the front matter. This means that we also have to treat these cases differently.
+
+To make the ``<img ...`` element accessable by ``id`` I simply added ``id-'headerIMG'`` to the element so the line becomes:
+
+{% raw %}
+```html
+<img id='headerIMG' src="{{ img_path }}" alt="{{ image_description }}" class="page__hero-image">
 ```
 {% endraw %}
 
