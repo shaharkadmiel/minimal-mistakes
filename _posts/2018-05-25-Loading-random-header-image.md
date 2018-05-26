@@ -72,10 +72,6 @@ I found this very helpfull [post](https://thornelabs.net/2014/01/19/display-rand
 
 {% raw %}
 ```javascript
-<!--
-  Javascript and Liquid code to gather a list of all header images
-  in /assets/images/headers/
--->
 <script type="text/javascript">
     var headers = [
     {% for image in site.static_files %}
