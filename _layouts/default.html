@@ -32,6 +32,19 @@
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
+    {% if page.header.image == 'random' %}
+      <script type="text/javascript">
+        var randomIndex;
+        var headers;
+
+        randomIndex = Math.floor(Math.random() * headers.length);
+
+        $(document).ready(function() {
+            $("#headerIMG").attr('src', headers[randomIndex]);
+        });
+      </script>
+    {% endif %}
+
     <div class="initial-content">
       {{ content }}
     </div>

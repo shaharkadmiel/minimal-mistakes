@@ -85,23 +85,10 @@ I found this very helpfull [post](https://thornelabs.net/2014/01/19/display-rand
 {% endraw %}
 \* *everything in the square brackets must be one line. Lines here are broken for readability*
 
-Every other layout is initially dependent on the default layout so the ``headers`` variable set within the above script is available in the current page.
-
-On every page that you want to randomize the header image place the following JavaScript
+And place the following code in the ``body`` section:
 
 {% raw %}
 ```javascript
-<script type="text/javascript">
-    var randomIndex;
-    var headers;
-
-    randomIndex = Math.floor(Math.random() * headers.length);
-
-    document.write('<p>' + headers[randomIndex] + '</p>');
-</script>
-```
-{% endraw %}
-
 {% if page.header.image == 'random' %}
     <script type="text/javascript">
         var randomIndex;
@@ -109,12 +96,17 @@ On every page that you want to randomize the header image place the following Ja
 
         randomIndex = Math.floor(Math.random() * headers.length);
 
-        document.write('<p>' + headers[randomIndex] + '</p>');
-
         $(document).ready(function() {
             $("#headerIMG").attr('src', headers[randomIndex]);
         });
     </script>
 {% endif %}
+```
+{% endraw %}
+
+
+Every other layout is initially dependent on the default layout so the ``headers`` variable set within the above script is available in the current page.
+
+On every page that you want to randomize the header image place the following JavaScript code:
 
 {{ page.header.image | inspect }}
