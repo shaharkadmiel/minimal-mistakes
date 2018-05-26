@@ -112,6 +112,8 @@ On every page that you want to randomize the header image place the following Ja
 
     randomIndex = Math.floor(Math.random() * headers.length);
 
+    document.write('<p>' + headers[randomIndex] + '</p>');
+
     <div class="page__hero" style=" ">
         <img src=headers[randomIndex] alt="Random header image" class="page__hero-image">
     </div>
