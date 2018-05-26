@@ -109,6 +109,10 @@ On every page that you want to randomize the header image place the following Ja
     randomIndex = Math.floor(Math.random() * headers.length);
 
     document.write('<p>' + headers[randomIndex] + '</p>');
+
+    $(document).ready(function() {
+        $('body').css('background-image', 'url(' + headers[randomIndex] + ')');
+    });
 </script>
 
 {{ page.header.image | inspect }}
