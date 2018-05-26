@@ -113,7 +113,7 @@ On every page that you want to randomize the header image place the following Ja
     randomIndex = Math.floor(Math.random() * headers.length);
 
     document.write('<p>' + headers[randomIndex] + '</p>');
-    {{ page.header.image = headers[randomIndex] }}
+    {% assign page.header.image = headers[randomIndex] %}
 </script>
 
 {{ page.header.image | inspect }}
