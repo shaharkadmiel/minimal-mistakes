@@ -1,7 +1,8 @@
 ---
 title: Randomizing header image
 header:
-  image: "random-header"
+  image: <script type="text/javascript"> var randomIndex;
+    var headers; randomIndex = Math.floor(Math.random() * headers.length); document.write(headers[randomIndex]); </script>
 tags: [Random stuff, Images, Jekyll, Liquid, JavaScript]
 # excerpt: Hillshading code.
 classes: wide
