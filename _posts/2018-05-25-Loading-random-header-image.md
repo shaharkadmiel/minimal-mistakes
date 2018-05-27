@@ -96,7 +96,7 @@ I added the following JavaScript/Liquid mix to the ``<head>`` section of the ``d
 <script src="/assets/js/vendor/jquery/jquery-3.3.1.min.js" type="text/javascript"></script>
 
 <!--
-  Javascript and Liquid code to gather a list of all header images
+  JavaScript and Liquid code to gather a list of all header images
   in /assets/images/headers/
 -->
 {% if page.header.image == 'random' or page.header.overlay_image == 'random' %}
@@ -144,10 +144,11 @@ I added the following JavaScript/Liquid mix to the ``<head>`` section of the ``d
 {% endif %}
 ```
 {% endraw %}
-\* *everything in the square brackets between lines 4 and 10 must be one line. Lines here are broken for readability*
 
 Lines 1 through 11 compile a list of images in ``/assets/images/headers/`` and assigns that list to a ``header_images`` array variable.
 
 Line 14 loads the [jQuery](http://jquery.com/) library that allows setting the ``src`` attribute of the ``.page__hero-image`` class in the case of ``image:`` or the ``style`` attribute of the ``.page__hero--overlay`` class in the case of ``overlay_image:``.
 
-Every other layout is initially dependent on the default layout so header ``image`` or ``image-overlay`` can be randomized in all layouts. Simply set ``image: random`` or ``image-overlay: random`` in the front matter and you are set.
+Line 20 makes sure the JavaScript is executed only if randomization is required. The contents of the square brackets between lines 23 and 27 **must** be one line. Lines here are broken for readability
+
+Every other layout is initially dependent on the default layout so header ``image`` or ``overlay_image`` can be randomized in all layouts. Simply set ``image: random`` or ``overlay_image: random`` in the front matter and you are set.
