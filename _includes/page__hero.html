@@ -48,12 +48,15 @@
     var header = headers[randomIndex];
 
   {% elsif page.header.image %}
-    var header = page.header.image
+    var header = {{ page.header.image }};
 
   {% elsif page.header.overlay_image %}
-    var header = page.header.overlay_image
+    var header = {{ page.header.overlay_image }};
 
   {% endif %}
+
+  <p id='test'></p>
+  document.getElementById("test").innerHTML = header;
 
 </script>
 
