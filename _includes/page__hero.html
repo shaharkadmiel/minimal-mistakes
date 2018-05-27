@@ -30,14 +30,6 @@
 
 {% assign image_description = image_description | markdownify | strip_html | strip_newlines | escape_once %}
 
-{% assign site.header_images = "" | split: ',' %}
-
-{% for image in site.static_files %}
-  {% if image.path contains '/assets/images/headers/' %}
-    {% assign site.header_images = site.header_images | push: image.path %}
-  {% endif %}
-{% endfor %}
-
 <div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %}"
   style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}');{% endif %}"
 >
