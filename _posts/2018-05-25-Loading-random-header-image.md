@@ -1,7 +1,7 @@
 ---
 title: Randomizing header image
 header:
-  overlay_image: /assets/images/headers/kalymnos.jpg
+  overlay_image: random
   overlay_filter: rgba(255, 255, 255, 0.3)
   caption: "Image subject to Copyright: [**© Shahar Shani-Kadmiel**](https://shaharkadmiel.github.io)"
 tags: [Random stuff, Images, Jekyll, Liquid, JavaScript, jQuery, Hacking]
