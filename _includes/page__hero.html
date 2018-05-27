@@ -38,6 +38,9 @@
   {% endif %}
 {% endfor %}
 
+<p id='test'></p>
+document.getElementById("test").innerHTML = header;
+
 <script type="text/javascript">
 
   var headers = [{% for image in headers %}"{{ site.baseurl }}{{ image }}",{% endfor %}];
@@ -48,20 +51,17 @@
     var header = headers[randomIndex];
 
   {% elsif page.header.image %}
-    var header = {{ page.header.image }};
+    var header = "{{ site.baseurl }}{{ page.header.image }}";
 
   {% elsif page.header.overlay_image %}
-    var header = {{ page.header.overlay_image }};
+    var header = "{{ site.baseurl }}{{ page.header.overlay_image }}";
 
   {% endif %}
-
-  <p id='test'></p>
-  document.getElementById("test").innerHTML = header;
 
 </script>
 
 <div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %}"
-  style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url(header);{% endif %}"
+  style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url(" + header+ ");{% endif %}"
 >
   {% if page.header.overlay_color or page.header.overlay_image %}
     <div class="wrapper">
