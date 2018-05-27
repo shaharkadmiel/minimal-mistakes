@@ -129,7 +129,14 @@ I added the following JavaScript/Liquid mix to the ``<head>`` section of the ``d
       {% endif %}
 
       $(document).ready(function() {
-        $(".page__hero--overlay").attr('style', '{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: "transparent" }};{% endif %} background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url(' + header_image + ')');
+        $(".page__hero--overlay").attr('style',
+          '{% if page.header.overlay_color %}
+            background-color: {{ page.header.overlay_color | default:
+                "transparent" }};
+          {% endif %}
+          background-image: {% if overlay_filter %}
+            linear-gradient({{ overlay_filter }}, {{ overlay_filter }}),
+          {% endif %}url(' + header_image + ')');
       });
 
     {% endif %}
@@ -139,6 +146,8 @@ I added the following JavaScript/Liquid mix to the ``<head>`` section of the ``d
 {% endraw %}
 \* *everything in the square brackets between lines 4 and 10 must be one line. Lines here are broken for readability*
 
-The first line loads the [jQuery](http://jquery.com/) library that is used in lines 16-23 in order to set the ``src`` attribute of the ``.page__hero-image`` class in the case of ``image:`` or the ``css`` ``background-image`` ``url`` of the ``.page__hero--overlay`` class in the case of ``overlay_image:``.
+Lines 1 through 11 compile a list of images in ``/assets/images/headers/`` and assigns that list to a ``header_images`` array variable.
+
+Line 14 loads the [jQuery](http://jquery.com/) library that allows setting the ``src`` attribute of the ``.page__hero-image`` class in the case of ``image:`` or the ``style`` attribute of the ``.page__hero--overlay`` class in the case of ``overlay_image:``.
 
 Every other layout is initially dependent on the default layout so header ``image`` or ``image-overlay`` can be randomized in all layouts. Simply set ``image: random`` or ``image-overlay: random`` in the front matter and you are set.
