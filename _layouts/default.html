@@ -33,7 +33,7 @@
             });
           {% elsif page.header.overlay_image == 'random' %}
             $(document).ready(function() {
-              $(".page__hero--overlay").css('background-image', 'url(' + headers  [randomIndex] + ')');
+              $(".page__hero--overlay").attr('style', 'background-image: url(' + headers[randomIndex] + ')');
             });
           {% endif %}
         </script>
