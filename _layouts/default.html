@@ -13,7 +13,7 @@
     {% include head.html %}
     {% include head/custom.html %}
 
-    <!-- <script src="/assets/js/vendor/jquery/jquery-3.3.1.min.js" type="text/javascript"></script> -->
+    <script src="/assets/js/vendor/jquery/jquery-3.3.1.min.js" type="text/javascript"></script>
 
     <!--
       Javascript and Liquid code to gather a list of all header images
@@ -28,10 +28,14 @@
         var header_image = header_images[randomIndex]
 
         {% if page.header.image == 'random' %}
-          document.getElementsByClassName('page__hero-image').src = header_image;
+          $(document).ready(function() {
+            $(".page__hero-image").attr('src', header_image);
+          });
 
         {% elsif page.header.overlay_image == 'random' %}
-          document.getElementsByClassName('page__hero--overlay').style = "{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url(" + header_image + ");"
+          $(document).ready(function() {
+            $(".page__hero--overlay").attr('style', '{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: "transparent" }};{% endif %} background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url(' + header_image + ');');
+          });
 
         {% endif %}
       </script>
