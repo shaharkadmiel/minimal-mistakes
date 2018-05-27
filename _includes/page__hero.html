@@ -40,7 +40,7 @@
 
 <script type="text/javascript">
 
-  var headers = {{ headers }};
+  var headers = [{% for image in headers %}"{{ site.baseurl }}{{ image }}",{% endfor %}];
 
   {% if page.header.image == 'random' or page.header.overlay_image == 'random' %}
 
