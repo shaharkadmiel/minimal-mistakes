@@ -149,6 +149,6 @@ Lines 1 through 11 compile a list of images in ``/assets/images/headers/`` and a
 
 Line 14 loads the [jQuery](http://jquery.com/) library that allows setting the ``src`` attribute of the ``.page__hero-image`` class in the case of ``image:`` or the ``style`` attribute of the ``.page__hero--overlay`` class in the case of ``overlay_image:``.
 
-Line 20 makes sure the JavaScript is executed only if randomization is required. The contents of the square brackets between lines 23 and 27 **must** be one line. Lines here are broken for readability
+Line 20 makes sure the JavaScript is executed only if randomization is required. The contents of the square brackets between lines 23 and 27 **must** be one line. Similarly, Lines 50 through 57 **must** be one line. *Lines here are broken for readability.
 
 Every other layout is initially dependent on the default layout so header ``image`` or ``overlay_image`` can be randomized in all layouts. Simply set ``image: random`` or ``overlay_image: random`` in the front matter and you are set.
