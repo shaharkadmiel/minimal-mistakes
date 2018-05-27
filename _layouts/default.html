@@ -64,29 +64,6 @@
         {% endif %}
       </script>
     {% endif %}
-
-    <!-- <script type="text/javascript">
-
-      var headers = [{% for image in site.static_files %}{% if image.path contains '/assets/images/headers/' %}"{{ site.baseurl }}{{ image.path }}",{% endif %}{% endfor %}];
-
-      {% if page.header.image == 'random' or page.header.overlay_image == 'random' %}
-
-          var randomIndex = Math.floor(Math.random() * headers.length);
-
-          {% if page.header.image == 'random' %}
-            $(document).ready(function() {
-              $(".page__hero-image").attr('src', headers[randomIndex]);
-            });
-          {% elsif page.header.overlay_image == 'random' %}
-            $(document).ready(function() {
-              $(".page__hero--overlay").attr('style', 'background-image: url(' + headers[randomIndex] + ')');
-            });
-          {% endif %}
-        </script>
-      {% endif %}
-
-    </script> -->
-
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">

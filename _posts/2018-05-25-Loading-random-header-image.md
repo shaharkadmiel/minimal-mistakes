@@ -50,6 +50,8 @@ We can now have a look at what is stored in the ``headers`` array with:
 ```
 {% endraw %}
 
+which outputs:
+
 {{ headers | inspect }}
 
 ### Pick a random header
@@ -78,32 +80,61 @@ I added the following JavaScript/Liquid mix to the ``<head>`` section of the ``d
 
 {% raw %}
 ```html
+<!-- Make a list of header images -->
+<!-- init the list -->
+{% assign header_images = "" | split: ',' %}
+
+<!-- loop and add -->
+{% for image in site.static_files %}
+  {% if image.path contains '/assets/images/headers/' %}
+    <!-- add image -->
+    {% assign header_images = header_images | push: image.path %}
+  {% endif %}
+{% endfor %}
+
+<!-- Load jQuery -->
 <script src="/assets/js/vendor/jquery/jquery-3.3.1.min.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-  var headers = [
-  {% for image in site.static_files %}
-    {% if image.path contains '/assets/images/headers/' %}
-      "{{ site.baseurl }}{{ image.path }}"
-        {% unless forloop.last %},{% endunless %}
-    {% endif %}
-  {% endfor %}];
+<!--
+  Javascript and Liquid code to gather a list of all header images
+  in /assets/images/headers/
+-->
+{% if page.header.image == 'random' or page.header.overlay_image == 'random' %}
+  <script type="text/javascript">
+    // get images from ``header_images`` array to js var
+    var header_images = [
+      {% for image in header_images %}
+        "{{ site.baseurl }}{{ image }}",
+      {% endfor %}
+    ];
 
-  {% if page.header.image == 'random' or page.header.overlay_image == 'random' %}
+    var randomIndex = Math.floor(Math.random() * header_images.length);
 
-    var randomIndex = Math.floor(Math.random() * headers.length);
+    // and the winning ``header_image`` is...
+    var header_image = header_images[randomIndex]
 
+    // image without overlay
     {% if page.header.image == 'random' %}
       $(document).ready(function() {
-        $(".page__hero-image").attr('src', headers[randomIndex]);
+        $(".page__hero-image").attr('src', header_image);
       });
+
+    // image with overlay
     {% elsif page.header.overlay_image == 'random' %}
+      // make sure overlay filter is handled correctly
+      {% if page.header.overlay_filter contains "rgba" %}
+        {% capture overlay_filter %}{{ page.header.overlay_filter }}{% endcapture %}
+      {% elsif page.header.overlay_filter %}
+        {% capture overlay_filter %}rgba(0, 0, 0, {{ page.header.overlay_filter }}){% endcapture %}
+      {% endif %}
+
       $(document).ready(function() {
-        $(".page__hero--overlay").css('background-image', 'url(' + headers[randomIndex] + ')');
+        $(".page__hero--overlay").attr('style', '{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: "transparent" }};{% endif %} background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url(' + header_image + ')');
       });
+
     {% endif %}
-  {% endif %}
-</script>
+  </script>
+{% endif %}
 ```
 {% endraw %}
 \* *everything in the square brackets between lines 4 and 10 must be one line. Lines here are broken for readability*
