@@ -31,7 +31,7 @@
           document.getElementsByClassName('page__hero-image').src = header_image;
 
         {% elsif page.header.overlay_image == 'random' %}
-          document.getElementsByClassName('page__hero--overlay').style = "{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url(" + header_image + ");{% endif %}"
+          document.getElementsByClassName('page__hero--overlay').style = "{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url(" + header_image + ");"
 
         {% endif %}
       </script>
