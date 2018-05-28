@@ -3,11 +3,9 @@ title: About me and this blog
 permalink: /about/
 excerpt: I am a scientist, climber, avid programmer and much much more...
 header:
-  overlay_image: /assets/images/headers/kalymnos.jpg
-  caption: "Photo credit: [**Shahar Shani-Kadmiel**](https://shaharkadmiel.github.io)"
-  image_description: View of Telendos Island, Kalymnos.
-  cta_label: Full size image
-  cta_url: /assets/images/headers/kalymnos.jpg
+  overlay_image: random
+  overlay_filter: rgba(255, 255, 255, 0.3)
+  caption: "Image subject to Copyright: [**© Shahar Shani-Kadmiel**](https://shaharkadmiel.github.io)"
   show_overlay_excerpt: false
 author_profile: true
 published: true
