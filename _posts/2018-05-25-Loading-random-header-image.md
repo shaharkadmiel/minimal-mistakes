@@ -68,7 +68,7 @@ Using the ``sample`` filter we get a random item from the ``headers`` array.
 {% assign random-header = headers | sample %}
 {{ random-header | inspect }}
 
-The problem is that because Jekyll is a static site generator, this happens when the static page is built and not on reload. So we need to encapsulate this in a JavaScript that is executed every time a page is reloaded.
+The problem is that because Jekyll is a static site generator, this happens when the static page is *built* and not on reload. So we need to encapsulate this in a JavaScript that is executed every time a page is *served*.
 
 ## <a id="solution"></a>The solution
 
@@ -80,26 +80,26 @@ I added the following JavaScript/Liquid mix to the ``<head>`` section of the ``d
 
 {% raw %}
 ```html
-<!-- Make a list of header images -->
-<!-- init the list -->
-{% assign header_images = "" | split: ',' %}
-
-<!-- loop and add -->
-{% for image in site.static_files %}
-  {% if image.path contains '/assets/images/headers/' %}
-    <!-- add image -->
-    {% assign header_images = header_images | push: image.path %}
-  {% endif %}
-{% endfor %}
-
 <!-- Load jQuery -->
 <script src="/assets/js/vendor/jquery/jquery-3.3.1.min.js" type="text/javascript"></script>
 
-<!--
-  JavaScript and Liquid code to gather a list of all header images
-  in /assets/images/headers/
--->
 {% if page.header.image == 'random' or page.header.overlay_image == 'random' %}
+  <!-- Make a list of header images -->
+  <!-- init the list -->
+  {% assign header_images = "" | split: ',' %}
+
+  <!-- loop and add -->
+  {% for image in site.static_files %}
+    {% if image.path contains '/assets/images/headers/' %}
+      <!-- add image -->
+      {% assign header_images = header_images | push: image.path %}
+    {% endif %}
+  {% endfor %}
+
+  <!--
+    Javascript and Liquid code to gather a list of all header images
+    in /assets/images/headers/
+  -->
   <script type="text/javascript">
     // get images from ``header_images`` array to js var
     var header_images = [
@@ -145,10 +145,12 @@ I added the following JavaScript/Liquid mix to the ``<head>`` section of the ``d
 ```
 {% endraw %}
 
-Lines 1 through 11 compile a list of images in ``/assets/images/headers/`` and assigns that list to a ``header_images`` array variable.
+Lines 1 through 11 compile a list of images in ``/assets/images/headers/`` and assigns that list to a ``header_images`` array variable. This is outside the JavaScrip code and is run only when the page is built, not every time it is served.
 
 Line 14 loads the [jQuery](http://jquery.com/) library that allows setting the ``src`` attribute of the ``.page__hero-image`` class in the case of ``image:`` or the ``style`` attribute of the ``.page__hero--overlay`` class in the case of ``overlay_image:``.
 
-Line 20 makes sure the JavaScript is executed only if randomization is required. The contents of the square brackets between lines 23 and 27 **must** be one line. Similarly, Lines 50 through 57 **must** be one line. *Lines here are broken for readability.
+On build, line 20 makes sure the JavaScript is executed only if randomization is required. If not, the entire JavaScript code block will not be there. It will completely vanish from the pages source. The contents of the square brackets between lines 23 and 27 **must** be one line. Similarly, Lines 50 through 57 **must** be one line. *Lines here are broken for readability.
+
+###  YAML front matter
 
 Every other layout is initially dependent on the default layout so header ``image`` or ``overlay_image`` can be randomized in all layouts. Simply set ``image: random`` or ``overlay_image: random`` in the front matter and you are set.
