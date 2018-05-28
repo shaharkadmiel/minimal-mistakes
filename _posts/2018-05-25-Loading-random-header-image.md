@@ -157,7 +157,7 @@ The contents of the square brackets between lines 23 and 27 **must** be one line
 
 Every other layout is initially dependent on the ``default`` layout so header ``image`` or ``overlay_image`` can be randomized in all layouts. Simply set ``image: random`` or ``overlay_image: random`` in the front matter and you are set.
 
-Here is an example of a [page with a random header ``image``](/random_header_image/) (unlike this post which has a random header ``overlay_image``). If you were wondering what the front matter for this post looks like, here it is:
+Here is an example of a [page with a random header image](/_pages/random_header_image/) (unlike this post which has a random header ``overlay_image``). If you were wondering what the front matter for this post looks like, here it is:
 
 ```yaml
 ---
