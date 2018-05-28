@@ -11,7 +11,7 @@ author_profile: true
 published: true
 ---
 
-Having a random header on reload is a neat feature. I have included my initial attempt but you can skip directly to the [solution](#solution) below.
+Having a random header on reload is a neat feature. I managed to get it to work. *Try it... hit reload!*. I have included my initial attempt which didn't work but parts of it made it into the [solution](#solution).
 
 ## The initial idea
 
@@ -145,12 +145,31 @@ I added the following JavaScript/Liquid mix to the ``<head>`` section of the ``d
 ```
 {% endraw %}
 
-Lines 1 through 11 compile a list of images in ``/assets/images/headers/`` and assigns that list to a ``header_images`` array variable. This is outside the JavaScrip code and is run only when the page is built, not every time it is served.
+Line 2 loads the [jQuery](http://jquery.com/) library that allows setting the ``src`` attribute of the ``.page__hero-image`` class in the case of ``image:`` or the ``style`` attribute of the ``.page__hero--overlay`` class in the case of ``overlay_image:``.
 
-Line 14 loads the [jQuery](http://jquery.com/) library that allows setting the ``src`` attribute of the ``.page__hero-image`` class in the case of ``image:`` or the ``style`` attribute of the ``.page__hero--overlay`` class in the case of ``overlay_image:``.
+On build, line 4 makes sure nothing happens unless randomization is needed. If not, lines 5 through 62 will completely vanish from the page source.
 
-On build, line 20 makes sure the JavaScript is executed only if randomization is required. If not, the entire JavaScript code block will not be there. It will completely vanish from the pages source. The contents of the square brackets between lines 23 and 27 **must** be one line. Similarly, Lines 50 through 57 **must** be one line. *Lines here are broken for readability.
+Lines 7 through 15 compile a list of images in ``/assets/images/headers/`` and assigns that list to a ``header_images`` array variable. This is outside the JavaScrip code so it is run only when the page is built, not every time it is served.
+
+The contents of the square brackets between lines 23 and 27 **must** be one line. Similarly, Lines 50 through 57 **must** be one line. *Lines here are broken for readability.
 
 ###  YAML front matter
 
-Every other layout is initially dependent on the default layout so header ``image`` or ``overlay_image`` can be randomized in all layouts. Simply set ``image: random`` or ``overlay_image: random`` in the front matter and you are set.
+Every other layout is initially dependent on the ``default`` layout so header ``image`` or ``overlay_image`` can be randomized in all layouts. Simply set ``image: random`` or ``overlay_image: random`` in the front matter and you are set.
+
+Here is an example of a [page with a random header ``image``](/random_header_image/) (unlike this post which has a random header ``overlay_image``). If you were wondering what the front matter for this post looks like, here it is:
+
+```yaml
+---
+title: Randomizing header image
+header:
+  overlay_image: random
+  overlay_filter: rgba(255, 255, 255, 0.3)
+  caption: "Image subject to Copyright: [**© Shahar Shani-Kadmiel**](https://shaharkadmiel.github.io)"
+tags: [Random stuff, Images, Jekyll, Liquid, JavaScript, jQuery, Hacking]
+toc: true
+toc_label: "Contents"
+author_profile: true
+published: true
+---
+```
