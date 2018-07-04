@@ -11,4 +11,10 @@ author_profile: true
 published: true
 ---
 
-Hi. Welcome to my blog. I am not entirely sure what to write here at this point so I will state the obvious and add to it as we go along.
+Hi. Welcome to my blog. I am a scientist, teacher, avid programmer, passionate climber, professional procrastinator and more. I am driven by curiosity.
+
+This blog will be a mix of random thoughts, code snippets, and anecdotes from my life as an academic. Hopefully, these will all be related somehow to geophysics and will be helpful to others tackling similar problems.
+
+I am currently a postdoc researcher at Delft University of Technology. My main topic of research is seismo-acoustic coupling. With in this topic, I study seismic- and acoustic-wave propagation and the interaction between these two wavefields. I got my PhD from Ben-Gurion University of the Negev and did a one-year postdoc at the Geological Survey of Israel prior to coming to the Netherlands.
+
+That's it for now. I hope you enjoy my posts and pages and I will add more to this relatively short about page at a later point in time...

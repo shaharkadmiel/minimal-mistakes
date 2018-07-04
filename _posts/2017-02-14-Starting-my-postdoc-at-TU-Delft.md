@@ -2,11 +2,11 @@
 title: Starting my postdoc at TU Delft
 tags: [Academia, Job, Postdoc, Infrasound, Seismo-Acoustics, TU Delft, VIDI]
 header:
-  overlay_image: /assets/images/headers/ice_skating_on_campus.JPG
+  overlay_image: /assets/images/headers/img_5875.jpg
   caption: "Photo credit: [**Shahar Shani-Kadmiel**](https://shaharkadmiel.github.io)"
   image_description: "Ice skating on the frozen canals on campus."
   cta_label: "Full size image"
-  cta_url: /assets/images/headers/ice_skating_on_campus.JPG
+  cta_url: /assets/images/headers/img_5875.jpg
   show_overlay_excerpt: false
 author_profile: true
 published: true
