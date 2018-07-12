@@ -4,40 +4,13 @@ excerpt: Preparations toward our 1-day workshop.
 header:
   overlay_image: https://raw.githubusercontent.com/shaharkadmiel/TU-Delft-Python-workshop/master/images/_banner_.jpg
   overlay_filter: rgba(255, 255, 255, 0.3)
-  caption: "Image subject to Copyright: [**© Shahar Shani-Kadmiel**](https://shaharkadmiel.github.io)"
+  caption: "[**Shahar Shani-Kadmiel, CiTG, TU Delft**](https://shaharkadmiel.github.io)"
   show_overlay_excerpt: false
+toc: true
+toc_label: "Contents"
 author_profile: true
 published: true
 ---
-
-<div
-    style='background-image: url("https://raw.githubusercontent.com/shaharkadmiel/TU-Delft-Python-workshop/master/images/_banner_.jpg"); padding: 0px;
-    background-size: cover; border-radius: 10px; height: 250px;
-    background-position: 50% 50%'>
-    <div
-        style="float: left; margin: 20px; padding: 10px;
-        background: rgba(255 , 255 , 255 , 0.8); width: 40%; height: 100px;
-        border-radius: 10px">
-        <div
-            style="position: relative; top: 50%;
-            transform: translatey(-50%)">
-            <div
-                style="font-size: xx-large; font-weight: 900;
-                color: rgba(0 , 0 , 0 , 0.9);
-                line-height: 100%">Python Workshop
-            </div>
-            <div
-                style="font-size: large; padding-top: 20px;
-                color: rgba(0 , 0 , 0 , 0.7)">Getting ready
-            </div>
-        </div>
-    </div>
-    <div style="float: right; font-size: small;
-        position: relative; top: 90%; padding: 5px;
-        background: rgba(255 , 255 , 255 , 0.6); border-top-left-radius: 10px;
-        color: rgba(0 , 0 , 0 , 1)">Shahar Shani-Kadmiel, CiTG, TU Delft
-    </div>
-</div>
 
 Welcome everyone to our introductory Python workshop. As we stated in the initial email, the purpose of this workshop is to help you dive into Python and do basic (or not so basic) data visualization, reading and writing files, prototyping processing workflows into reusable tools and more.
 
