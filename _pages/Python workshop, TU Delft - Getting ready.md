@@ -1,11 +1,19 @@
 ---
 title: Python workshop, TU Delft - Getting ready
+excerpt: Preparations toward our 1-day workshop.
+header:
+  overlay_image: https://raw.githubusercontent.com/shaharkadmiel/TU-Delft-Python-workshop/master/images/_banner_.jpg
+  overlay_filter: rgba(255, 255, 255, 0.3)
+  caption: "Image subject to Copyright: [**© Shahar Shani-Kadmiel**](https://shaharkadmiel.github.io)"
+  show_overlay_excerpt: false
+author_profile: true
+published: true
 author_profile: true
 published: true
 ---
 
 <div
-    style='background-image: url("_banner_.jpg"); padding: 0px;
+    style='background-image: url("https://raw.githubusercontent.com/shaharkadmiel/TU-Delft-Python-workshop/master/images/_banner_.jpg"); padding: 0px;
     background-size: cover; border-radius: 10px; height: 250px;
     background-position: 50% 50%'>
     <div
