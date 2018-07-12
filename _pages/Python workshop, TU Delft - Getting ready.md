@@ -1,5 +1,5 @@
 ---
-title: Python workshop, TU Delft - Getting ready
+title: Python workshop, TU Delft | Getting ready
 excerpt: Preparations toward our 1-day workshop.
 header:
   overlay_image: https://raw.githubusercontent.com/shaharkadmiel/TU-Delft-Python-workshop/master/images/_banner_.jpg
@@ -55,7 +55,7 @@ To install the packages we need for the workshop copy and paste the following in
 conda config --add channels conda-forge && conda install -y ipython notebook ipywidgets numpy scipy pandas gdal matplotlib basemap basemap-data-hires cython sympy obspy
 ```
 
-This may take a couple of minuets and will result is many other packages getting installed as *conda* takes care of package dependencies for you.
+This may take a couple of minutes and will result is many other packages getting installed as *conda* takes care of package dependencies for you.
 
 ---
 ## 3. Test your environment
@@ -81,7 +81,7 @@ import ipywidgets
 
 ![testing_imports](images/testing_imports.png)
 
-Execute the code in the cell by pressing <kbd>Shift</kbd> + <kbd>Enter</kbd> (<kbd>⇧↩</kbd>) or clicking the <button class="btn btn-default" title="Run" style="padding: 1px 5px"><i class="fa-step-forward fa"></i><span class="toolbar-btn-label">Run</span></button> button.
+Execute the code in the cell by pressing ``Shift`` + ``Enter`` (<kbd>⇧↩</kbd>) or clicking the <button class="btn btn-default" title="Run" style="padding: 1px 5px"><i class="fa-step-forward fa"></i><span class="toolbar-btn-label">Run</span></button> button.
 
 It is alright if you get some warnings but if you get an error message please come see me so we can solve this before the workshop. If a new code cell is created like in the above screenshot you are *good-to-go*.
 
