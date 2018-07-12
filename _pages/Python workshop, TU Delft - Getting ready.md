@@ -8,8 +8,6 @@ header:
   show_overlay_excerpt: false
 author_profile: true
 published: true
-author_profile: true
-published: true
 ---
 
 <div
