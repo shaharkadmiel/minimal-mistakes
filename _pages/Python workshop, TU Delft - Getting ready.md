@@ -1,5 +1,6 @@
 ---
 title: Python workshop, TU Delft | Getting ready
+subtitle: Getting ready
 excerpt: Preparations toward our 1-day workshop.
 header:
   overlay_color: "#333"
