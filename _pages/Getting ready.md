@@ -5,7 +5,7 @@ published: true
 ---
 
 <div
-    style='background-image: url("images/_banner_.jpg"); padding: 0px;
+    style='background-image: url("_banner_.jpg"); padding: 0px;
     background-size: cover; border-radius: 10px; height: 250px;
     background-position: 50% 50%'>
     <div
