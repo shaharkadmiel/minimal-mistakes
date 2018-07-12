@@ -1,6 +1,6 @@
 ---
 title: Python workshop, TU Delft - Getting ready
-author_profile: false
+author_profile: true
 published: true
 ---
 
