@@ -2,6 +2,7 @@
 title: Python workshop, TU Delft | Getting ready
 excerpt: Preparations toward our 1-day workshop.
 header:
+  overlay_color: "#333"
   overlay_image: https://raw.githubusercontent.com/shaharkadmiel/TU-Delft-Python-workshop/master/images/_banner_.jpg
   overlay_filter: rgba(255, 255, 255, 0.3)
   caption: "[**Shahar Shani-Kadmiel, CiTG, TU Delft**](https://shaharkadmiel.github.io)"
