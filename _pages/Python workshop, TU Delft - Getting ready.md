@@ -4,7 +4,7 @@ title_color: 'white'
 excerpt: Preparations toward our 1-day workshop.
 header:
   overlay_image: https://raw.githubusercontent.com/shaharkadmiel/TU-Delft-Python-workshop/master/images/_banner_.jpg
-  overlay_filter: rgba(255, 255, 255, 0.3)
+  overlay_filter: rgba(255, 255, 255, 0.1)
   caption: "[**Shahar Shani-Kadmiel, CiTG, TU Delft**](https://shaharkadmiel.github.io)"
   show_overlay_excerpt: false
 toc: true
