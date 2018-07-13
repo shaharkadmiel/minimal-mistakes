@@ -1,6 +1,6 @@
 ---
 title: Python workshop, TU Delft | Getting ready
-title_color: '#494e52'
+title_color: 'white'
 excerpt: Preparations toward our 1-day workshop.
 header:
   overlay_image: https://raw.githubusercontent.com/shaharkadmiel/TU-Delft-Python-workshop/master/images/_banner_.jpg
