@@ -53,7 +53,7 @@ Conda is a smart tool for package, dependency and environment management for man
 To install the packages we need for the workshop copy and paste the following into the Terminal:
 
 ```bash
-conda config --add channels conda-forge && conda install -y ipython notebook ipywidgets numpy scipy pandas gdal matplotlib basemap basemap-data-hires cython sympy obspy
+conda config --add channels conda-forge && conda install -y ipython notebook ipywidgets numpy scipy pandas gdal matplotlib basemap basemap-data-hires pillow cython sympy obspy
 ```
 
 This may take a couple of minutes and will result is many other packages getting installed as *conda* takes care of package dependencies for you.
